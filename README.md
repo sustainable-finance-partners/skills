@@ -12,6 +12,10 @@ emerging technology trajectories on current business models. Phronesis sells
 primarily via API/MCP to AI agents, and secondarily via a thin SaaS UI to human
 capital allocators.
 
+All **twelve verticals are live on production** — each ring-active and governed by a
+per-vertical Themis rule cluster — and the 12-vertical-deep substrate is published as
+a verifiable manifest at `GET /v1/substrate/completeness`.
+
 Every Phronesis forecast is delivered through a structured **Decision API** output:
 a point forecast, a `p10 / p50 / p90` uncertainty band, explicit assumptions, cited
 sources, and a per-call cost attestation. Forecasts are individually verifiable
@@ -88,6 +92,30 @@ entry point is:
 
 All `/.well-known/*.json` surfaces and the catalog/pricing/leaderboard endpoints are
 public-by-design. The forecast endpoint requires a JWT.
+
+## Trust & governance
+
+Phronesis is built so an agent can trust a forecast on **evidence, not brand claims**:
+
+- **Per-vertical Themis rule clusters** — every forecast passes a code-enforced
+  governance gate before publication; rules BLOCK or inject caveats at the boundary.
+- **Trust Receipts** — each forecast has a signed, individually-retrievable
+  verifiability artifact (`GET /v1/trust/receipt/{forecast_id}`).
+- **Calibration Leaderboard** — per-vertical accuracy is scored against held-out
+  ground truth and published openly (`GET /calibration/leaderboard`).
+- **Algorithm Protection §6.X** — customer-facing surfaces emit commerce / discovery
+  substrate only; no model identity, no algorithm substrate.
+- **Autonomy Tier classification** — each Phronesis component is classified on a
+  Level 1–5 autonomy scale, cross-walked to the regulatory Consequential Decision
+  tiers (`GET /v1/legal/autonomy-tier-classification`).
+
+**Legal substrate status.** Phronesis publishes disclosure surfaces (no-investment-
+advice, sub-processors, DMCA, Consequential Decision classification). These are
+**scaffolding pending General Counsel review** — each carries a
+`[DRAFT - pending General Counsel review]` marker until the GC engagement completes.
+
+This Skills repo follows the format of the [Circle Skills repo](https://github.com/circlefin/skills);
+Phronesis and Circle's Agent Stack are complementary substrates for agentic commerce.
 
 ## License
 
