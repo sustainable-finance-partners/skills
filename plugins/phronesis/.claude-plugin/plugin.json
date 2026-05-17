@@ -1,0 +1,9 @@
+{
+  "name": "phronesis",
+  "description": "Agent Skills for the Phronesis energy-transition forecasting platform. Teaches an agent how to request decision forecasts across 12 verticals (energy, compute, healthcare, climate, regulatory, supply-chain, space, robotics, AI/AGI, physics/materials, longevity, quantum) and cross-vertical intersections, how to read the structured Decision API output, and how to verify forecasts via Trust Receipts and the Calibration Leaderboard.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Sustainable Finance Partners",
+    "url": "https://github.com/sustainable-finance-partners"
+  }
+}
