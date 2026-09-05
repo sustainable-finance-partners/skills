@@ -10,9 +10,9 @@ progression, clinical-trial outcomes, and the impact of healthcare policy. Use t
 skill when an agent must ground a healthcare or biotech decision in a calibrated
 forecast.
 
-- **Base URL:** `https://phronesis-jrstinehour.replit.app`
+- **Base URL:** `https://api.phronesisintel.com`
 - **Vertical:** V3 — Healthcare — Pythia ring `Hygieia`, Themis cluster `themis-V3-healthcare`
-- **Transports:** co-equal MCP and REST.
+- **Transports:** semantic parity across MCP and REST; transport-appropriate projection.
 
 ## HIPAA / PHI discipline — read first
 
@@ -72,3 +72,18 @@ probability band), enumerated **assumptions**, the **sources** citation chain,
 - Keep all inputs population-aggregate; never attempt per-patient prediction.
 - Present probability forecasts with the full band and the assumptions.
 - Treat output as decision-support; do not relay it as clinical guidance.
+
+## Assurance trail (`.phronesis/`)
+
+When this skill guides a real decision task, keep a per-task working directory
+`.phronesis/<task-slug>/` in the calling agent's workspace and maintain the six-file
+assurance trail as the task progresses:
+
+1. `decision_requirement.md` — the decision in one sentence, owner, materiality, horizon (written first).
+2. `evidence_notes.md` — evidence consulted, with sources and timestamps.
+3. `action_boundary_request.json` — the exact boundary/assessment request sent, verbatim.
+4. `decision_receipt.json` — the receipt/forecast output returned, verbatim — never edited.
+5. `outcome_followup.md` — what was decided and the trigger that revisits it.
+6. `review_log.md` — dated review notes, append-only.
+
+Full convention: `docs/DOT_PHRONESIS_CONVENTION.md` in this repository.

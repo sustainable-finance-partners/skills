@@ -22,11 +22,11 @@ sources, and a per-call cost attestation. Forecasts are individually verifiable
 through signed **Trust Receipts**, and per-vertical accuracy is published openly on
 the **Calibration Leaderboard**.
 
-Phronesis exposes **co-equal MCP and REST transports** — neither is the "real" API;
+Phronesis exposes MCP and REST with **semantic parity** — transport-appropriate projection of the same governance boundary;
 both pass through the same governance boundary. The production base URL is:
 
 ```
-https://phronesis-jrstinehour.replit.app
+https://api.phronesisintel.com
 ```
 
 ## What this repo provides
@@ -81,7 +81,7 @@ npx skills add sustainable-finance-partners/skills
 These skills are companions to the live Phronesis service. The agent-discoverable
 entry point is:
 
-- MCP / REST base URL: `https://phronesis-jrstinehour.replit.app`
+- MCP / REST base URL: `https://api.phronesisintel.com`
 - Agent discovery: `GET /.well-known/agent-discovery.json`
 - Vertical + archetype catalog: `GET /v1/catalog`
 - Pricing tiers: `GET /v1/pricing`
