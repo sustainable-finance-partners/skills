@@ -69,7 +69,7 @@ assurance trail as the task progresses:
 1. `decision_requirement.md` — the decision in one sentence, owner, materiality, horizon (written first).
 2. `evidence_notes.md` — evidence consulted, with sources and timestamps.
 3. `action_boundary_request.json` — the exact boundary/assessment request sent, verbatim.
-4. `decision_receipt.json` — the receipt/forecast output returned, verbatim — never edited.
+4. `decision_asset.json` — the receipt/forecast output returned, verbatim — never edited.
 5. `outcome_followup.md` — what was decided and the trigger that revisits it.
 6. `review_log.md` — dated review notes, append-only.
 
