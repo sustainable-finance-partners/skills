@@ -11,9 +11,9 @@ agent must ground an energy-related decision in a calibrated forecast with an
 uncertainty band, explicit assumptions, cited sources, and an audit trail — not a
 free-text estimate.
 
-- **Base URL:** `https://phronesis-jrstinehour.replit.app`
+- **Base URL:** `https://api.phronesisintel.com`
 - **Vertical:** V1 — Energy — Pythia ring `Pythia-Energy`, Themis cluster `themis-V1-energy`
-- **Transports:** co-equal MCP and REST. Either reaches the same governance boundary.
+- **Transports:** semantic parity across MCP and REST; transport-appropriate projection. Either reaches the same governance boundary.
 
 ## Archetypes available
 
@@ -83,3 +83,18 @@ The response is a contract-v1 envelope: `{ "status": "ok", "data": { ... },
 - For high-stakes capacity-planning decisions, prefer `strategic` compute tier and
   cite the Trust Receipt `audit_trail_id` in your own output so the decision chain
   stays verifiable.
+
+## Assurance trail (`.phronesis/`)
+
+When this skill guides a real decision task, keep a per-task working directory
+`.phronesis/<task-slug>/` in the calling agent's workspace and maintain the six-file
+assurance trail as the task progresses:
+
+1. `decision_requirement.md` — the decision in one sentence, owner, materiality, horizon (written first).
+2. `evidence_notes.md` — evidence consulted, with sources and timestamps.
+3. `action_boundary_request.json` — the exact boundary/assessment request sent, verbatim.
+4. `decision_receipt.json` — the receipt/forecast output returned, verbatim — never edited.
+5. `outcome_followup.md` — what was decided and the trigger that revisits it.
+6. `review_log.md` — dated review notes, append-only.
+
+Full convention: `docs/DOT_PHRONESIS_CONVENTION.md` in this repository.

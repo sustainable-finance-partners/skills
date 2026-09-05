@@ -11,9 +11,9 @@ battery-chemistry breakthroughs, superconductor discovery, and the maturation of
 advanced-manufacturing substrate. Use this skill when an agent must ground a
 research, R&D-investment, or technology-bet decision in a calibrated forecast.
 
-- **Base URL:** `https://phronesis-jrstinehour.replit.app`
+- **Base URL:** `https://api.phronesisintel.com`
 - **Vertical:** V10 — Physics & Materials Discovery — Pythia ring `Pythia-Physics-Materials`, Themis cluster `themis-V10-physics-materials-#97`
-- **Transports:** co-equal MCP and REST.
+- **Transports:** semantic parity across MCP and REST; transport-appropriate projection.
 
 ## Archetypes available
 
@@ -63,3 +63,18 @@ attestation**, and an **`audit_trail_id`**.
 - Battery-chemistry forecasts pair with V1 (Energy) and V6 (Supply-Chain); see the
   `cross_product` skill for those crossings.
 - Discovery forecasts carry wide bands; pass the full band and assumptions downstream.
+
+## Assurance trail (`.phronesis/`)
+
+When this skill guides a real decision task, keep a per-task working directory
+`.phronesis/<task-slug>/` in the calling agent's workspace and maintain the six-file
+assurance trail as the task progresses:
+
+1. `decision_requirement.md` — the decision in one sentence, owner, materiality, horizon (written first).
+2. `evidence_notes.md` — evidence consulted, with sources and timestamps.
+3. `action_boundary_request.json` — the exact boundary/assessment request sent, verbatim.
+4. `decision_receipt.json` — the receipt/forecast output returned, verbatim — never edited.
+5. `outcome_followup.md` — what was decided and the trigger that revisits it.
+6. `review_log.md` — dated review notes, append-only.
+
+Full convention: `docs/DOT_PHRONESIS_CONVENTION.md` in this repository.

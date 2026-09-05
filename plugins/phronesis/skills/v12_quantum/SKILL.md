@@ -11,9 +11,9 @@ quantum-chemistry simulation capability, and canonical attestation of quantum
 vendors. Use this skill when an agent must ground a quantum-technology or
 crypto-migration decision in a calibrated forecast.
 
-- **Base URL:** `https://phronesis-jrstinehour.replit.app`
+- **Base URL:** `https://api.phronesisintel.com`
 - **Vertical:** V12 — Quantum Computing — Pythia ring `Pythia-Quantum`, Themis cluster `themis-V12-quantum-#101`
-- **Transports:** co-equal MCP and REST.
+- **Transports:** semantic parity across MCP and REST; transport-appropriate projection.
 
 ## Vendor-citation governance — MANDATORY (Lesson #28)
 
@@ -84,3 +84,18 @@ assumption ids, the **cost attestation**, and an **`audit_trail_id`**.
 - Post-quantum-crypto-migration questions pair with V5 (Regulatory); see the
   `cross_product` skill.
 - Pass the full uncertainty band downstream and cite the Trust Receipt id.
+
+## Assurance trail (`.phronesis/`)
+
+When this skill guides a real decision task, keep a per-task working directory
+`.phronesis/<task-slug>/` in the calling agent's workspace and maintain the six-file
+assurance trail as the task progresses:
+
+1. `decision_requirement.md` — the decision in one sentence, owner, materiality, horizon (written first).
+2. `evidence_notes.md` — evidence consulted, with sources and timestamps.
+3. `action_boundary_request.json` — the exact boundary/assessment request sent, verbatim.
+4. `decision_receipt.json` — the receipt/forecast output returned, verbatim — never edited.
+5. `outcome_followup.md` — what was decided and the trigger that revisits it.
+6. `review_log.md` — dated review notes, append-only.
+
+Full convention: `docs/DOT_PHRONESIS_CONVENTION.md` in this repository.

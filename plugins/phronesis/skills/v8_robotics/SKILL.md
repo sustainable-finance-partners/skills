@@ -10,9 +10,9 @@ manipulation capability, the pace and pattern of labor displacement, and real-wo
 physical deployment trajectories. Use this skill when an agent must ground a
 robotics capability, workforce, or deployment decision in a calibrated forecast.
 
-- **Base URL:** `https://phronesis-jrstinehour.replit.app`
+- **Base URL:** `https://api.phronesisintel.com`
 - **Vertical:** V8 — Robotics — Pythia ring `Pythia-Robotics`, Themis cluster `themis-V8-robotics`
-- **Transports:** co-equal MCP and REST.
+- **Transports:** semantic parity across MCP and REST; transport-appropriate projection.
 
 ## Archetypes available
 
@@ -60,3 +60,18 @@ attestation**, and an **`audit_trail_id`**.
 - Labor-displacement forecasts pair with V5 (Regulatory) and V9 (AI/AGI); see the
   `cross_product` skill for those crossings.
 - Pass the full uncertainty band downstream and cite the Trust Receipt id.
+
+## Assurance trail (`.phronesis/`)
+
+When this skill guides a real decision task, keep a per-task working directory
+`.phronesis/<task-slug>/` in the calling agent's workspace and maintain the six-file
+assurance trail as the task progresses:
+
+1. `decision_requirement.md` — the decision in one sentence, owner, materiality, horizon (written first).
+2. `evidence_notes.md` — evidence consulted, with sources and timestamps.
+3. `action_boundary_request.json` — the exact boundary/assessment request sent, verbatim.
+4. `decision_receipt.json` — the receipt/forecast output returned, verbatim — never edited.
+5. `outcome_followup.md` — what was decided and the trigger that revisits it.
+6. `review_log.md` — dated review notes, append-only.
+
+Full convention: `docs/DOT_PHRONESIS_CONVENTION.md` in this repository.

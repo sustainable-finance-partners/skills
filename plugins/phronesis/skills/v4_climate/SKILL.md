@@ -10,9 +10,9 @@ and asset-exposure decisions: the probability and severity of extreme events and
 trajectory of climate scenarios. Use this skill when an agent must price, reserve
 against, or underwrite physical climate risk.
 
-- **Base URL:** `https://phronesis-jrstinehour.replit.app`
+- **Base URL:** `https://api.phronesisintel.com`
 - **Vertical:** V4 — Climate — Pythia ring `Pythia-Climate`, Themis cluster `themis-V4-climate`
-- **Transports:** co-equal MCP and REST.
+- **Transports:** semantic parity across MCP and REST; transport-appropriate projection.
 
 ## Archetypes available
 
@@ -65,3 +65,18 @@ is a signal about model and scenario uncertainty, not noise to discard.
 - Always carry the full uncertainty band into pricing / reserving logic.
 - Name the climate scenario explicitly in the request for scenario-projection work.
 - Cite the Trust Receipt `audit_trail_id` so an underwriting decision stays auditable.
+
+## Assurance trail (`.phronesis/`)
+
+When this skill guides a real decision task, keep a per-task working directory
+`.phronesis/<task-slug>/` in the calling agent's workspace and maintain the six-file
+assurance trail as the task progresses:
+
+1. `decision_requirement.md` — the decision in one sentence, owner, materiality, horizon (written first).
+2. `evidence_notes.md` — evidence consulted, with sources and timestamps.
+3. `action_boundary_request.json` — the exact boundary/assessment request sent, verbatim.
+4. `decision_receipt.json` — the receipt/forecast output returned, verbatim — never edited.
+5. `outcome_followup.md` — what was decided and the trigger that revisits it.
+6. `review_log.md` — dated review notes, append-only.
+
+Full convention: `docs/DOT_PHRONESIS_CONVENTION.md` in this repository.
