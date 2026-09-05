@@ -23,7 +23,7 @@ reconstructing them from chat history.
 | 1 | `decision_requirement.md` | first, before any call | the decision in one sentence, decision owner, materiality, resolution horizon |
 | 2 | `evidence_notes.md` | as evidence is gathered | evidence consulted, with sources and timestamps |
 | 3 | `action_boundary_request.json` | at call time | the exact action-boundary / assessment request sent, verbatim |
-| 4 | `decision_receipt.json` | on response | the receipt / forecast output returned, verbatim — never edited |
+| 4 | `decision_asset.json` | on response | the receipt / forecast output returned, verbatim — never edited |
 | 5 | `outcome_followup.md` | at decision time | what was decided, and the trigger that revisits it |
 | 6 | `review_log.md` | append-only | dated review notes over the task's life; entries are appended, never rewritten |
 
