@@ -22,25 +22,6 @@ capability decision in a calibrated forecast.
 
 Confirm via `GET /v1/catalog` (V7 entry's `archetypes_available` + `status`).
 
-## Requesting a forecast
-
-```
-POST /v1/decision/forecast
-Authorization: Bearer <JWT>
-Content-Type: application/json
-
-{
-  "vertical": "V7",
-  "archetype": "launch-cadence",
-  "subject": "space",
-  "question": "Global orbital launch count for 2027",
-  "horizon": "2027",
-  "compute_tier": "deep"
-}
-```
-
-`compute_tier`: `standard`, `deep`, `strategic`, or `strategic-sync`.
-
 ## Reading the Decision API output
 
 Contract-v1 envelope `{ "status": "ok", "data": {...}, "request_id": "..." }`. The

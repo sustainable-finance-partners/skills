@@ -32,30 +32,6 @@ Computing. Per-vertical archetypes and live status are listed at `GET /v1/catalo
 - **V10 x V1** — battery-chemistry breakthroughs conditioned on energy demand.
 - **V12 x V5** — post-quantum-crypto migration conditioned on regulatory mandates.
 
-## Requesting a cross-product forecast
-
-Name both verticals; pick the archetype from whichever vertical is the primary
-forecast target, and pass the second vertical as the conditioning context:
-
-```
-POST /v1/decision/forecast
-Authorization: Bearer <JWT>
-Content-Type: application/json
-
-{
-  "vertical": "V9",
-  "cross_vertical": "V5",
-  "archetype": "agi-timeline-forecast",
-  "subject": "ai_agi",
-  "question": "Probability a frontier model meets the AGI capability bar before 2030, conditioned on the pace of AI-safety regulation",
-  "horizon": "2030",
-  "compute_tier": "strategic"
-}
-```
-
-Cross-product questions are inherently higher-variance; `strategic` or
-`strategic-sync` compute tiers are usually warranted.
-
 ## Reading the Decision API output
 
 Contract-v1 envelope `{ "status": "ok", "data": {...}, "request_id": "..." }`. The

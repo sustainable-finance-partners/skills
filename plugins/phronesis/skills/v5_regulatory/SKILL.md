@@ -23,26 +23,6 @@ energy, climate, healthcare, AI/AGI, and beyond.
 
 Confirm via `GET /v1/catalog` (V5 entry).
 
-## Requesting a forecast
-
-```
-POST /v1/decision/forecast
-Authorization: Bearer <JWT>
-Content-Type: application/json
-
-{
-  "vertical": "V5",
-  "archetype": "regulatory-shift-forecasting",
-  "subject": "regulatory",
-  "question": "Probability the EPA finalizes a stricter power-plant emissions rule before end of 2027",
-  "horizon": "2027",
-  "jurisdiction": "US-Federal",
-  "compute_tier": "deep"
-}
-```
-
-`compute_tier`: `standard`, `deep`, `strategic`, or `strategic-sync`.
-
 ## Reading the Decision API output
 
 Contract-v1 envelope `{ "status": "ok", "data": {...}, "request_id": "..." }`. The

@@ -33,25 +33,6 @@ ingest, store, or forecast against individual-level protected health information
 
 Confirm via `GET /v1/catalog` (V3 entry).
 
-## Requesting a forecast
-
-```
-POST /v1/decision/forecast
-Authorization: Bearer <JWT>
-Content-Type: application/json
-
-{
-  "vertical": "V3",
-  "archetype": "biotech-trial-outcome",
-  "subject": "healthcare",
-  "question": "Probability a Phase III GLP-1 cardiovascular-outcomes trial meets its primary endpoint by 2027",
-  "horizon": "2027",
-  "compute_tier": "deep"
-}
-```
-
-`compute_tier`: `standard`, `deep`, `strategic`, or `strategic-sync`.
-
 ## Reading the Decision API output
 
 Contract-v1 envelope `{ "status": "ok", "data": {...}, "request_id": "..." }`. The
