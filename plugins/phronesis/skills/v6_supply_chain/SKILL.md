@@ -22,25 +22,6 @@ must ground a sourcing, logistics, or inventory decision in a calibrated forecas
 
 Confirm via `GET /v1/catalog` (V6 entry's `archetypes_available` + `status`).
 
-## Requesting a forecast
-
-```
-POST /v1/decision/forecast
-Authorization: Bearer <JWT>
-Content-Type: application/json
-
-{
-  "vertical": "V6",
-  "archetype": "critical-minerals",
-  "subject": "supply_chain",
-  "question": "Lithium carbonate supply-demand balance through 2028",
-  "horizon": "2028",
-  "compute_tier": "deep"
-}
-```
-
-`compute_tier`: `standard`, `deep`, `strategic`, or `strategic-sync`.
-
 ## Reading the Decision API output
 
 Contract-v1 envelope `{ "status": "ok", "data": {...}, "request_id": "..." }`. The

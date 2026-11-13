@@ -31,25 +31,6 @@ population-, cohort-, or trial-level. Output is decision-support, not medical ad
 
 Confirm via `GET /v1/catalog` (V11 entry's `archetypes_available` + `status`).
 
-## Requesting a forecast
-
-```
-POST /v1/decision/forecast
-Authorization: Bearer <JWT>
-Content-Type: application/json
-
-{
-  "vertical": "V11",
-  "archetype": "geroscience-trial-outcome",
-  "subject": "longevity",
-  "question": "Probability a major rapamycin healthspan trial meets its primary endpoint by 2028",
-  "horizon": "2028",
-  "compute_tier": "deep"
-}
-```
-
-`compute_tier`: `standard`, `deep`, `strategic`, or `strategic-sync`.
-
 ## Reading the Decision API output
 
 Contract-v1 envelope `{ "status": "ok", "data": {...}, "request_id": "..." }`. The
