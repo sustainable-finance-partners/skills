@@ -22,25 +22,6 @@ robotics capability, workforce, or deployment decision in a calibrated forecast.
 
 Confirm via `GET /v1/catalog` (V8 entry's `archetypes_available` + `status`).
 
-## Requesting a forecast
-
-```
-POST /v1/decision/forecast
-Authorization: Bearer <JWT>
-Content-Type: application/json
-
-{
-  "vertical": "V8",
-  "archetype": "physical-deployment",
-  "subject": "robotics",
-  "question": "Number of humanoid robots deployed in US warehouse operations by end of 2028",
-  "horizon": "2028",
-  "compute_tier": "deep"
-}
-```
-
-`compute_tier`: `standard`, `deep`, `strategic`, or `strategic-sync`.
-
 ## Reading the Decision API output
 
 Contract-v1 envelope `{ "status": "ok", "data": {...}, "request_id": "..." }`. The

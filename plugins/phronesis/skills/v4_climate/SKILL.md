@@ -22,27 +22,6 @@ against, or underwrite physical climate risk.
 
 Confirm via `GET /v1/catalog` (V4 entry's `archetypes_available` + `status`).
 
-## Requesting a forecast
-
-```
-POST /v1/decision/forecast
-Authorization: Bearer <JWT>
-Content-Type: application/json
-
-{
-  "vertical": "V4",
-  "archetype": "extreme-event-probability",
-  "subject": "climate",
-  "question": "Probability of a Category 4+ hurricane landfall in the Gulf Coast in the 2027 season",
-  "horizon": "2027",
-  "region": "US-Gulf-Coast",
-  "compute_tier": "strategic"
-}
-```
-
-`compute_tier`: `standard`, `deep`, `strategic`, or `strategic-sync`. Physical-risk
-underwriting decisions usually warrant `strategic`.
-
 ## Reading the Decision API output
 
 Contract-v1 envelope `{ "status": "ok", "data": {...}, "request_id": "..." }`. The

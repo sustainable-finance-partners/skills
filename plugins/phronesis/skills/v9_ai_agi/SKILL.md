@@ -25,26 +25,6 @@ strategic decision about AI progress in a calibrated forecast.
 
 Confirm via `GET /v1/catalog` (V9 entry's `archetypes_available` + `status`).
 
-## Requesting a forecast
-
-```
-POST /v1/decision/forecast
-Authorization: Bearer <JWT>
-Content-Type: application/json
-
-{
-  "vertical": "V9",
-  "archetype": "agi-timeline-forecast",
-  "subject": "ai_agi",
-  "question": "Probability a frontier model meets the defined AGI capability bar before 2030",
-  "horizon": "2030",
-  "compute_tier": "strategic"
-}
-```
-
-`compute_tier`: `standard`, `deep`, `strategic`, or `strategic-sync`. Long-horizon
-AGI questions usually warrant `strategic`.
-
 ## Reading the Decision API output
 
 Contract-v1 envelope `{ "status": "ok", "data": {...}, "request_id": "..." }`. The

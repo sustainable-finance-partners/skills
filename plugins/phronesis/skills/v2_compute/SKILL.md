@@ -27,25 +27,6 @@ capacity, procurement, or capital-allocation decision in a calibrated forecast.
 Confirm the archetype is live via `GET /v1/catalog` (the V2 entry's
 `archetypes_available` list and `status`).
 
-## Requesting a forecast
-
-```
-POST /v1/decision/forecast
-Authorization: Bearer <JWT>
-Content-Type: application/json
-
-{
-  "vertical": "V2",
-  "archetype": "datacenter-buildout",
-  "subject": "compute",
-  "question": "US datacenter capacity additions in GW for 2027",
-  "horizon": "2027",
-  "compute_tier": "deep"
-}
-```
-
-`compute_tier` is abstract: `standard`, `deep`, `strategic`, or `strategic-sync`.
-
 ## Reading the Decision API output
 
 The response is a contract-v1 envelope `{ "status": "ok", "data": {...},

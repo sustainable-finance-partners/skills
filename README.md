@@ -85,13 +85,13 @@ entry point is:
 - Agent discovery: `GET /.well-known/agent-discovery.json`
 - Vertical + archetype catalog: `GET /v1/catalog`
 - Pricing tiers: `GET /v1/pricing`
-- Decision forecast (JWT-gated): `POST /v1/decision/forecast`
+- Decision forecast: `POST /v1/decision/forecast` — Closed to outside callers.
 - Substrate completeness: `GET /v1/substrate/completeness`
 - Trust Receipt verification: `GET /v1/trust/receipt/{forecast_id}`
 - Calibration Leaderboard: `GET /calibration/leaderboard`
 
 All `/.well-known/*.json` surfaces and the catalog/pricing/leaderboard endpoints are
-public-by-design. The forecast endpoint requires a JWT.
+public-by-design.
 
 ## Trust & governance
 

@@ -27,30 +27,6 @@ Pick the archetype that matches the decision before calling the endpoint:
 Confirm the archetype is live by calling `GET /v1/catalog` and checking the V1
 entry's `archetypes_available` list and `status: LIVE`.
 
-## Requesting a forecast
-
-Call the JWT-gated Decision API:
-
-```
-POST /v1/decision/forecast
-Authorization: Bearer <JWT>
-Content-Type: application/json
-
-{
-  "vertical": "V1",
-  "archetype": "demand-load-forecast",
-  "subject": "energy",
-  "question": "Peak summer load for the ERCOT grid region in 2028",
-  "horizon": "2028",
-  "region": "ERCOT",
-  "compute_tier": "deep"
-}
-```
-
-`compute_tier` is abstract — one of `standard`, `deep`, `strategic`, or
-`strategic-sync`. Deeper tiers buy more reasoning depth and source breadth; the
-per-call cost is attested in the response, not guessed by the caller.
-
 ## Reading the Decision API output
 
 The response is a contract-v1 envelope: `{ "status": "ok", "data": { ... },
